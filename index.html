@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="name">🚙 Weather Driven ⚠️</h1>
+
+      <h2 id="title" class="title">Current Date and Time</h2>
+      <div class="weather-form">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+                type="search"
+                placeholder="Enter A City 🗽"
+                autofocus="on"
+                autocomplete="off"
+                id="city-input"
+                class="form-control shadow-sm"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="🔎"
+                class="form-control btn btn-primary shadow-sm w-70"
+              />
+            </div>
+
+            <div class="col-3">
+              <button class="btn btn-success w-70" id="current-location-button">
+                📍
+              </button>
+            </div>
+
+            <div class="col-2">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>EN</option>
+                <option value="1">SP</option>
+                <option value="2">PT</option>
+              </select>
+            </div>
+            <div class="col-1">
+              <select
+                class="form-select"
+                id="metric-selection"
+                aria-label="Default select example"
+              >
+                <option selected id="celsius">°C</option>
+                <option value="1" id="fahrenheint">°F</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <h1 id="city"></h1>
+        <ul>
+          <li id="date"></li>
+          <li id="description"></li>
+        </ul>
+        <div class="row">
+          <div class="col-6">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="temperature" id="temperature"></span
+                ><span class="units">°F</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              <li>Feels Like: <span id="feels"></span>°</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> mph</li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    <div class="span12" style="text-align:center">
+      <a href=https://github.com/mariscript/my-weather-app.git" class="link">Open-Source Code</a> by Marison Munoz. 👩‍💻
+   </div>
+   
+   
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
