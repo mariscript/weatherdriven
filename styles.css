@@ -77,3 +77,14 @@ li {
 .search-form {
   margin-bottom: 20px;
 }
+
+a.link {
+  color: #cccccc;
+  text-align: center;
+}
+
+.code {
+  list-style: none;
+  text-align: center;
+}
+
