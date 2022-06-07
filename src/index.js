@@ -49,6 +49,8 @@ function setupDate(date) {
 function displayWeatherCondition(response) {
   let iconElement = document.querySelector("#icon");
 
+  fahrenheitTemperature = response.data.main.temp;
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
@@ -110,5 +112,29 @@ searchDoc.addEventListener("submit", magnifyButton);
 
 let pinDropButton = document.querySelector("#current-location-button");
 pinDropButton.addEventListener("click", getCurrentLocation);
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  fahrenheitOption.classList.remove("default");
+  celsiusOption.classList.add("default");
+  let celsiusTemperature = (fahrenheitTemperature - 32) / 1.8;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusOption.classList.remove("default");
+  fahrenheitOption.classList.add("default");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusOption = document.querySelector("#celsius-option");
+celsiusOption.addEventListener("click", displayCelsiusTemperature);
+
+let fahrenheitOption = document.querySelector("#fahrenheit-option");
+fahrenheitOption.addEventListener("click", displayFahrenheitTemperature);
 
 searchCity("New Jersey");

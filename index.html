@@ -54,16 +54,6 @@
                 <option value="2">PT</option>
               </select>
             </div>
-            <div class="col-1">
-              <select
-                class="form-select"
-                id="metric-selection"
-                aria-label="Default select example"
-              >
-                <option selected id="celsius">°C</option>
-                <option value="1" id="fahrenheint">°F</option>
-              </select>
-            </div>
           </div>
         </form>
 
@@ -74,7 +64,7 @@
         </ul>
         <div class="row">
           <div class="col-6">
-            <div class="clearfix">
+            <div class="clearfix weather-temp">
               <div class="float-left">
                 <img
                   src="https://cdn4.iconfinder.com/data/icons/thick-line-us-states/100/geography_state_map_usa-22-512.png"
@@ -83,8 +73,11 @@
                   class="float-left"
                   id="icon"
                 />
-                <span class="temperature" id="temperature"></span
-                ><span class="units">°F</span>
+                <strong id="temperature" class="temperature"></strong
+                ><span class="units"
+                  ><a href="#" id="fahrenheit-option" class="default">°F</a> |
+                  <a href="#" id="celsius-option">°C</a></span
+                >
               </div>
             </div>
           </div>
