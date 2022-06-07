@@ -47,11 +47,12 @@ function setupDate(date) {
 }
 
 function displayWeatherCondition(response) {
+  let iconElement = document.querySelector("#icon");
+
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -59,12 +60,20 @@ function displayWeatherCondition(response) {
   document.querySelector("#feels").innerHTML = Math.round(
     response.data.main.feels_like
   );
-
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-// Use imperial metric, because USA
+/* Use imperial metric, because USA.
+OpenWeather API key
+*/
 
 function searchCity(city) {
   let apiKey = "4f158b998cdd1f3876802fe0834b00f3";
