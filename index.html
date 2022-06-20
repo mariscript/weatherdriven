@@ -51,9 +51,10 @@
 
         <h1 id="city"></h1>
         <ul>
-          <li id="date"></li>
+          <li id="date" class="current-day"></li>
           <li id="description"></li>
         </ul>
+        <hr>
         <div class="row">
           <div class="col-6">
             <div class="clearfix weather-temp">
@@ -71,31 +72,40 @@
                   <a href="#" id="celsius-option">°C</a></span
                 >
               </div>
+              
             </div>
+            <hr>
           </div>
+          
           <div class="col-6">
-            <ul>
+            <ul class="feels-humid-wind">
               <li>Feels Like: <span id="feels"></span>°</li>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Wind: <span id="wind"></span> mph</li>
             </ul>
+          
           </div>
+          
         </div>
+ <div class="weather-forecast" id="forecast"></div>
+        <hr>
+          <div class="row">
+            <div class="car-condition"></div>
+            <div class="col-6">
+              <h6 class=vehicle>Always check the weather before going on long drives!</h6>
+              <h6 class=vehicle>Make sure your tires have tread.</h6>
+              <h6 class=vehicle>Make sure your wipers work properly.</h6>
+              <h6 class=vehicle>Always check fuel and oil levels.</h6>
+            </div>
+           <div class="col-6">
+              <img src="images/roadtrip.png"
+              class="car-photo"
+              alt="car"
+              width="250">
+           </div>
+          </div>
+</div>
 
-        <div class="row">
-          <div class="col-2">
-            <div class="weather-forecast-date">Thu</div>
-             <img
-               src="http://openweathermap.org/img/wn/50d@2x.png"
-                alt=""
-               width="43"
-        />
-        <div class="weather-forecast-temperature">
-          <span class="weather-forecast-temperature-max"> 18° </span>
-          <span class="weather-forecast-temperature-min"> 12° </span>
-          </div>
-        </div>
-      </div>
           </div>
         </div>
       </div>

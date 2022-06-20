@@ -43,6 +43,21 @@ li {
   list-style: none;
 }
 
+.car-condition {
+  margin: 1;
+  text-align: justify;
+}
+
+.car-photo {
+  margin: auto;
+  padding: 0;
+}
+
+.feels-humid-wind {
+  margin-left: auto;
+  padding: 0;
+}
+
 .form-select {
   width: 50px;
   margin-top: 5px;
@@ -56,6 +71,23 @@ li {
   max-width: 550px;
 }
 
+.weather-forecast {
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-weight: bolder;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: bolder;
+}
+
+.weather-forecast-temperature-min {
+  color: #ffffff;
+}
+
 .weather-icon {
   height: 64px;
   width: 64px;
@@ -67,6 +99,12 @@ li {
   font-size: 70px;
   font-weight: 500;
   line-height: 1;
+  margin-right: auto;
+  padding-right: 1px;
+}
+
+.title {
+  margin: 0 0 25px;
 }
 
 .units {
@@ -78,6 +116,10 @@ li {
   margin-bottom: 20px;
 }
 
+.span12 {
+  margin: 15px;
+}
+
 a.link {
   color: #cccccc;
   text-align: center;
@@ -87,4 +129,3 @@ a.link {
   list-style: none;
   text-align: center;
 }
-
