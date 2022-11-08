@@ -19,7 +19,7 @@ function setupDate(date) {
     "August",
     "September",
     "October",
-    "Nove,ber",
+    "November",
     "December",
   ];
 
@@ -71,7 +71,7 @@ function displayForecast(response) {
             forecastDay.weather[0].icon
           }@2x.png"
           alt=""
-          width="42"
+          width="75"
         />
         <div class="weather-forecast-temperatures">
           <span class="weather-forecast-temperature-max">${Math.round(
@@ -189,5 +189,21 @@ celsiusOption.addEventListener("click", displayCelsiusTemperature);
 
 let fahrenheitOption = document.querySelector("#fahrenheit-option");
 fahrenheitOption.addEventListener("click", displayFahrenheitTemperature);
+
+function displayPhrase() {
+  var phrases = [
+    "Always check the weather before going on long drives!",
+    "Make sure your tires have tread.",
+    "Make sure your wipers work properly.",
+    "Always check fuel and oil levels.",
+    "Drive safe today!",
+    "Dress accordingly!",
+    "Check your tire pressure regularly.",
+  ];
+
+  var randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+
+  console.log(randomPhrase);
+}
 
 searchCity("New Jersey");
